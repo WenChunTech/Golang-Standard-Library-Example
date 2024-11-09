@@ -1,0 +1,54 @@
+# Bytes
+
+- `func Clone(b []byte) []byte`: 复制一个byte slice
+- `func Compare(a, b []byte) int`: 比较两个byte slice
+- `func Contains(b, subslice []byte) bool`: 判断b是否包含subslice
+- `func ContainsAny(b []byte, chars string) bool`: 判断b是否包含chars中的任意字符
+- `func ContainsFunc(b []byte, f func(rune) bool) bool`: 判断b是否包含满足f函数的Rune
+- `func ContainsRune(b []byte, r rune) bool`: 判断b是否包含Rune
+- `func Count(s, sep []byte) int`: 计算sep在s中出现的次数
+- `func Cut(s, sep []byte) (before, after []byte, found bool)`: 按sep切割[]byte为两部分，返回切割后的两部分和是否找到sep
+- `func CutPrefix(s, prefix []byte) (after []byte, found bool)`: 去掉s的前缀prefix
+- `func CutSuffix(s, suffix []byte) (before []byte, found bool)`: 去掉s的后缀suffix
+- `func Equal(a, b []byte) bool`: 判断两个byte slice是否相等，和bytes.Compare不同，返回的是bool，而不是int
+- `func EqualFold(s, t []byte) bool`: 不区分大小写判断两个byte slice是否相等，返回的是bool
+- `func Fields(s []byte) [][]byte`: 按空格切割[]byte
+- `func FieldsFunc(s []byte, f func(rune) bool) [][]byte`: 按f函数切割[]byte
+- `func HasPrefix(s, prefix []byte) bool`: 判断s是否有前缀prefix
+- `func HasSuffix(s, suffix []byte) bool`: 判断s是否有后缀suffix
+- `func Index(s, sep []byte) int`: 返回sep在s中第一次出现的位置
+- `func IndexAny(s []byte, chars string) int`: 返回chars中任意字符在s中第一次出现的位置
+- `func IndexByte(b []byte, c byte) int`: 返回c在b中第一次出现的位置
+- `func IndexFunc(s []byte, f func(r rune) bool) int`: 返回满足f函数的Rune在s中第一次出现的位置
+- `func IndexRune(s []byte, r rune) int`: 返回r在s中第一次出现的位置
+- `func Join(s [][]byte, sep []byte) []byte`: 用sep连接s
+- `func LastIndex(s, sep []byte) int`: 返回sep在s中最后一次出现的位置
+- `func LastIndexAny(s []byte, chars string) int`: 返回chars中任意字符在s中最后一次出现的位置
+- `func LastIndexByte(s []byte, c byte) int`: 返回c在s中最后一次出现的位置
+- `func LastIndexFunc(s []byte, f func(r rune) bool) int`: 返回满足f函数的Rune在s中最后一次出现的位置
+- `func Map(mapping func(r rune) rune, s []byte) []byte`: 对s中的每个Rune应用mapping函数，返回新的[]byte
+- `func Repeat(b []byte, count int) []byte`: 重复b count次
+- `func Replace(s, old, new []byte, n int) []byte`: 替换s中的old为new，n为替换次数
+- `func ReplaceAll(s, old, new []byte) []byte`: 替换s中的old为new，替换所有
+- `func Runes(s []byte) []rune`: 将[]byte转为[]rune
+- `func Split(s, sep []byte) [][]byte`: 按sep切割[]byte
+- `func SplitAfter(s, sep []byte) [][]byte`: 按sep切割[]byte，保留sep
+- `func SplitAfterN(s, sep []byte, n int) [][]byte`: 按sep切割[]byte，保留sep，最多切割n次
+- `func SplitN(s, sep []byte, n int) [][]byte`: 按sep切割[]byte，最多切割n次
+- `func Title(s []byte) []byte`: 将s中的每个单词的首字母大写, 已废弃
+- `func ToLower(s []byte) []byte`: 将s中的每个字母转为小写
+- `func ToLowerSpecial(c unicode.SpecialCase, s []byte) []byte`: 将s中的每个字母转为小写，使用特殊规则
+- `func ToTitle(s []byte) []byte`: 将s中的每个单词的首字母大写
+- `func ToTitleSpecial(c unicode.SpecialCase, s []byte) []byte`: 将s中的每个单词的首字母大写，使用特殊规则
+- `func ToUpper(s []byte) []byte`: 将s中的每个字母转为大写
+- `func ToUpperSpecial(c unicode.SpecialCase, s []byte) []byte`: 将s中的每个字母转为大写，使用特殊规则
+- `func ToValidUTF8(s, replacement []byte) []byte`: 将s中的非UTF-8字符替换为replacement
+- `func Trim(s []byte, cutset string) []byte`: 去掉s的前后cutset
+- `func TrimFunc(s []byte, f func(r rune) bool) []byte`: 去掉s的前后满足f函数的Rune
+- `func TrimLeft(s []byte, cutset string) []byte`: 去掉s的前cutset
+- `func TrimLeftFunc(s []byte, f func(r rune) bool) []byte`: 去掉s的前满足f函数的Rune
+- `func TrimPrefix(s, prefix []byte) []byte`: 去掉s的前缀prefix
+- `func TrimRight(s []byte, cutset string) []byte`: 去掉s的后cutset
+- `func TrimRightFunc(s []byte, f func(r rune) bool) []byte`: 去掉s的后满足f函数的Rune
+- `func TrimSpace(s []byte) []byte`: 去掉s的前后空格
+- `func TrimSuffix(s, suffix []byte) []byte`: 去掉s的后缀suffix
